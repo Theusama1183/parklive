@@ -473,7 +473,7 @@ a.es:before {
 .body-section {
     height: 100%;
 }
-.map-section {
+/* .map-section {
     background-image: url(/img/map.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -482,6 +482,10 @@ a.es:before {
     padding: 0;
     border-top: 1px solid #adb5bd ;
 
+} */
+
+.map-section {
+    height: 100vh;
 }
 
 .filter-container {
