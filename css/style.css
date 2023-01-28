@@ -567,3 +567,19 @@ a.es:before {
     background: transparent;
 
 }
+.map-btn-container {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 6%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+.map-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 70px;
+    height: 60px;
+}
