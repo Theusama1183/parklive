@@ -21,34 +21,72 @@
     <title>ParkLive | PrePlan Commute</title>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/">
-                <img src="/img/logo in footer.png" alt="" width="150" >
-              </a>
-              
-    
-              <div class="header-btn-container flex">
-
-                <div class="language">
-                  <div class="language-selected">
-                      <img src="img/eng.png" alt="">
-                      <i class="fa fa-angle-down language-selected-icon"></i>
+        <nav class="navbar-jssd border-bottom border-dark-subtle">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a class="navbar-brand" href="/">
+                    <img src="/img/logo in footer.png" alt="" width="150" >
+                  </a>
+                </div>
+                <div class="col-8"></div>
+                <div class="col p-0">
+                <div class="header-btn-container flex">
+                  <div class="language">
+                    <div class="language-selected">
+                        <img src="img/eng.png" alt="">
+                        <i class="fa fa-angle-down language-selected-icon"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#" class="en">English</a></li> <!-- pt-BR -->
+                        <li><a href="#" class="br">Português</a></li> <!-- en-US -->
+                        <li><a href="#" class="es">Español</a></li> <!-- es --->
+                    </ul>
+                </div>
+            
+                  <div class="language" onclick="userBtn()">
+                    <img src="img/user-ac-nav.png" alt="">
                   </div>
-                  <ul>
-                      <li><a href="#" class="en">English</a></li> <!-- pt-BR -->
-                      <li><a href="#" class="br">Português</a></li> <!-- en-US -->
-                      <li><a href="#" class="es">Español</a></li> <!-- es --->
-                  </ul>
+                  
+                </div>
+                </div>
               </div>
-                <a href="/sign-up.html">
-                    <button class="rounded-pill btn btnSignup">Sign Up</button>
-                </a>
+             </div>
+             <div id="userMenuContaier" style="display: none;">
+              <table style="width: 100%;">
+                <tr>
+                  <td>
+                      <div class="user-nav-container">
+                       <div class="user-nav-link border-bottom">
+                        <div class="link-text">
+                          <img src="img/Icon awesome-user.png" alt="">
+                          <p>My Account</p>
+                        </div>
+                        <img src="img/next-btn.png" alt="">
+                       </div>
+
+                       <div class="user-nav-link">
+                        <div class="link-text">
+                          <img src="img/Icon open-account-logout.png" alt="">
+                          <p>Logout</p>
+                        </div>
+                        <img src="img/next-btn.png" alt="">
+                       </div> 
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              
+              <div class="search-container">
+                <form action="" method="post">
+                  <input type="text" name="search" id="search" class="search-field">
+                </form>
               </div>
+
             </div>
           </nav>
-       </div>
+
 
 </body>
 </html>

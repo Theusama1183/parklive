@@ -312,15 +312,21 @@ h1.footer-nav-title {
     position: absolute;
     left: 11%;
 }
-
+.header-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.navbar-jssd {
+    padding: 10px;
+}
 #email,#password,#rpassword {
     padding: 10px 10px !important;
 }
 
 .language {
     position: relative;
-    width: 120px;
-    margin-left: 40px;
+    width: 100px;
     font-weight: bold;
 }
 .language-selected {
@@ -333,7 +339,7 @@ h1.footer-nav-title {
     border-radius: 30px;
 }
 .language-selected-icon {
-    margin-left: 30px !important;
+    margin-left: 20px !important;
 }
 
 .language-selected.change-br:before {
@@ -395,4 +401,39 @@ a.es:before {
 
 .language:hover ul {
     display: block;
+}
+#userMenuContaier {
+    position: absolute;
+    width: 300px;
+    margin-top: 10px;
+    right: 0;
+    margin-right: 14%;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.user-nav-link {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-text {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.link-text  p {
+    margin: 0;
+    font-size: 16px;
+    margin-left: 10px;
+
+}
+.user-nav-link {
+    height: 40px;
+    border-color: #eee;
 }
