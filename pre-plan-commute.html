@@ -21,72 +21,221 @@
     <title>ParkLive | PrePlan Commute</title>
 </head>
 <body>
-        <nav class="navbar-jssd border-bottom border-dark-subtle">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a class="navbar-brand" href="/">
-                    <img src="/img/logo in footer.png" alt="" width="150" >
-                  </a>
-                </div>
-                <div class="col-8"></div>
-                <div class="col p-0">
-                <div class="header-btn-container flex">
-                  <div class="language">
-                    <div class="language-selected">
-                        <img src="img/eng.png" alt="">
-                        <i class="fa fa-angle-down language-selected-icon"></i>
-                    </div>
-                    <ul>
-                        <li><a href="#" class="en">English</a></li> <!-- pt-BR -->
-                        <li><a href="#" class="br">Português</a></li> <!-- en-US -->
-                        <li><a href="#" class="es">Español</a></li> <!-- es --->
-                    </ul>
-                </div>
-            
-                  <div class="language" onclick="userBtn()">
-                    <img src="img/user-ac-nav.png" alt="">
-                  </div>
-                  
-                </div>
-                </div>
-              </div>
-             </div>
-             <div id="userMenuContaier" style="display: none;">
-              <table style="width: 100%;">
-                <tr>
-                  <td>
-                      <div class="user-nav-container">
-                       <div class="user-nav-link border-bottom">
-                        <div class="link-text">
-                          <img src="img/Icon awesome-user.png" alt="">
-                          <p>My Account</p>
-                        </div>
-                        <img src="img/next-btn.png" alt="">
-                       </div>
 
-                       <div class="user-nav-link">
-                        <div class="link-text">
-                          <img src="img/Icon open-account-logout.png" alt="">
-                          <p>Logout</p>
-                        </div>
-                        <img src="img/next-btn.png" alt="">
-                       </div> 
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              
-              <div class="search-container">
-                <form action="" method="post">
-                  <input type="text" name="search" id="search" class="search-field">
-                </form>
-              </div>
-
+  <div class="content-container">
+    <div class="header-section">
+      <nav class="navbar-jssd border-bottom border-dark-subtle">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a class="navbar-brand" href="/">
+                <img src="/img/logo in footer.png" alt="" width="150" >
+              </a>
             </div>
-          </nav>
+            <div class="col-8"></div>
+            <div class="col p-0">
+            <div class="header-btn-container flex">
+              <div class="language">
+                <div class="language-selected">
+                    <img src="img/eng.png" alt="">
+                    <i class="fa fa-angle-down language-selected-icon"></i>
+                </div>
+                <ul>
+                    <li><a href="#" class="en">English</a></li> <!-- pt-BR -->
+                    <li><a href="#" class="br">Português</a></li> <!-- en-US -->
+                    <li><a href="#" class="es">Español</a></li> <!-- es --->
+                </ul>
+            </div>
+        
+              <div class="language" onclick="userBtn()">
+                <img src="img/user-ac-nav.png" alt="">
+              </div>
+              
+            </div>
+            </div>
+          </div>
+         </div>
+         <div id="userMenuContaier" style="display: none;">
+          <table style="width: 100%;">
+            <tr>
+              <td>
+                  <div class="user-nav-container">
+                   <div class="user-nav-link border-bottom">
+                    <div class="link-text">
+                      <img src="img/Icon awesome-user.png" alt="">
+                      <p>My Account</p>
+                    </div>
+                    <img src="img/next-btn.png" alt="">
+                   </div>
+  
+                   <div class="user-nav-link">
+                    <div class="link-text">
+                      <img src="img/Icon open-account-logout.png" alt="">
+                      <p>Logout</p>
+                    </div>
+                    <img src="img/next-btn.png" alt="">
+                   </div> 
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+        </div>
+      </nav>
+      <div class="container">
+        <div class="search-container">
+          <form action="" method="post">
+            <div class="search-container">
+              <button class="search-button" type="submit"><img src="img/search-btn.png" alt=""></button>
+              <input type="text" name="search" id="search" class="search-field" placeholder="Queens and Staten Island">
+              <img onclick="filterContainerBtn()" class="filter-button" src="img/filter-btn.png" alt="">
+            </div>
+          </form>
+          <div class="filter-container" id="filterContainer" style="display: none;">
+            <h4>Rating</h4>
+            <div class="rating-container">
+              <input type="checkbox" class="btn-check" id="rating-5">
+              <label class="add-filter-button btn btn-primary" for="rating-5">
+                05
+                <img src="img/star.png" alt="">
+              </label>
+              <input type="checkbox" class="btn-check" id="rating-4">
+              <label class="add-filter-button btn btn-primary" for="rating-4">
+                04
+                <img src="img/star.png" alt="">
+              </label>
+              <input type="checkbox" class="btn-check" id="rating-3">
+              <label class="add-filter-button btn btn-primary" for="rating-3">
+                03
+                <img src="img/star.png" alt="">
+              </label>
+              <input type="checkbox" class="btn-check" id="rating-2">
+              <label class="add-filter-button btn btn-primary" for="rating-2">
+                02
+                <img src="img/star.png" alt="">
+              </label>
+              <input type="checkbox" class="btn-check" id="rating-1">
+              <label class="add-filter-button btn btn-primary" for="rating-1">
+                01
+                <img src="img/star.png" alt="">
+              </label>
+            </div>
 
+          <h4>Distance</h4>
+          <div class="distance-container">
+              <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="1km">
+                <label class="add-filter-button btn btn-primary" for="1km">Within 1 km</label>
+              </button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="2-3km">
+                <label class="add-filter-button btn btn-primary" for="2-3km">2-3 km</label></button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="4-6-km">
+                <label class="add-filter-button btn btn-primary" for="4-6-km">4-6 km</label>
+              </button>
+            <button class="checkbox-btn"> 
+                <input type="checkbox" class="btn-check" id="8-10-km">
+                <label class="add-filter-button btn btn-primary" for="8-10-km">8-10 km</label>
+              </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="10-12-km">
+              <label class="add-filter-button btn btn-primary" for="10-12-km">10-12 km</label>
+            </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="13-14-km">
+              <label class="add-filter-button btn btn-primary" for="13-14-km">13-14 km</label>
+            </button>
+            <button class="checkbox-btn"> <input type="checkbox" class="btn-check" id="15-16-km">
+              <label class="add-filter-button btn btn-primary" for="15-16-km">15-16 km</label></button>
+              <button class="add-filter-button">View More</button>
+          </div>
+
+
+          <h4>Distance</h4>
+          <div class="distance-container">
+              <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="more-than-2-hours">
+                <label class="add-filter-button btn btn-primary" for="more-than-2-hours">More than 2 hours</label>
+              </button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="1-2-hours">
+                <label class="add-filter-button btn btn-primary" for="1-2-hours">1-2 hours</label></button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="5hours">
+                <label class="add-filter-button btn btn-primary" for="5hours">5 hours</label>
+              </button>
+            <button class="checkbox-btn"> 
+                <input type="checkbox" class="btn-check" id="10hours">
+                <label class="add-filter-button btn btn-primary" for="10hours">10 hours</label>
+              </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="15hours">
+              <label class="add-filter-button btn btn-primary" for="15hours">15 hours</label>
+            </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="20hours">
+              <label class="add-filter-button btn btn-primary" for="20hours">20 hours</label>
+            </button>
+              <button class="add-filter-button">View More</button>
+          </div>
+
+
+          <h4>Type of parking spot</h4>
+          <div class="distance-container">
+              <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="PermitParking">
+                <label class="add-filter-button btn btn-primary" for="PermitParking">Permit Parking</label>
+              </button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="Handicap">
+                <label class="add-filter-button btn btn-primary" for="Handicap">Handicap</label></button>
+             <button class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="Free">
+                <label class="add-filter-button btn btn-primary" for="Free">Free</label>
+              </button>
+            <button class="checkbox-btn"> 
+                <input type="checkbox" class="btn-check" id="Payable">
+                <label class="add-filter-button btn btn-primary" for="Payable">Payable</label>
+              </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="StreetParking">
+              <label class="add-filter-button btn btn-primary" for="StreetParking">Street Parking</label>
+            </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="PrivateParking">
+              <label class="add-filter-button btn btn-primary" for="PrivateParking">Private Parking</label>
+            </button>
+            <button class="checkbox-btn"> 
+              <input type="checkbox" class="btn-check" id="LongTermParking">
+              <label class="add-filter-button btn btn-primary" for="LongTermParking">Long Term Parking</label>
+            </button>
+              
+          </div>
+          <div class="filterBTN">
+            <button class="apply-filter-btn">Apply Filter</button>
+          </div>
+          
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="body-section">
+    <div class="map-section">
+      <div class="container">
+      
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-section">
+   <p>© All rights reserved. ParkLive</p>
+  </div>
+  </div>
 
 </body>
 </html>
