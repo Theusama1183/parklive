@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- custom files -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4ea6e3ab0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="/js/script.js"></script>
+    <title>ParkLive | Parking Schedule</title>
+  </head>
+
+  <body>
+    <div class="header-section">
+      <nav class="navbar-jssd border-bottom border-dark-subtle">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a class="navbar-brand" href="/">
+                <img src="/img/logo in footer.png" alt="" width="150" />
+              </a>
+            </div>
+            <div class="col-8"></div>
+            <div class="col p-0">
+              <div class="header-btn-container flex">
+                <div class="language">
+                  <div class="language-selected">
+                    <img src="img/eng.png" alt="" />
+                    <i
+                      class="fa fa-angle-down language-selected-icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <ul>
+                    <li><a href="#" class="en">English</a></li>
+                    <!-- pt-BR -->
+                    <li><a href="#" class="br">Português</a></li>
+                    <!-- en-US -->
+                    <li><a href="#" class="es">Español</a></li>
+                    <!-- es --->
+                  </ul>
+                </div>
+
+                <div class="language" onclick="userBtn()">
+                  <img src="img/user-ac-nav.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="userMenuContaier" style="display: none">
+          <table style="width: 100%">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-nav-container">
+                    <div class="user-nav-link border-bottom">
+                      <div class="link-text">
+                        <img src="img/Icon awesome-user.png" alt="" />
+                        <p>My Account</p>
+                      </div>
+                      <img src="img/next-btn.png" alt="" />
+                    </div>
+
+                    <div class="user-nav-link">
+                      <div class="link-text">
+                        <img src="img/Icon open-account-logout.png" alt="" />
+                        <p>Logout</p>
+                      </div>
+                      <img src="img/next-btn.png" alt="" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </nav>
+    </div>
+    <div class="parking_schedual_section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4 class="schedual-title">Parking Schedule</h4>
+          </div>
+          <div class="col text-center">
+            <div class="schedual-address">
+              <img src="img/location-icon.png" alt="" />
+              <p>8409 Santa Monica Building, Los Angeles, California</p>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a href="#">
+              <button class="schedual-button">Continue</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="row date-range-container">
+          <div class="col">
+            <button class="pre-btn date-range-btn"><img src="/img/pre.png" alt=""></button>
+          </div>
+          <div class="col text-center">
+            <div class="date-range">
+              <p> 23 January 2023 - 29 January 2023</p>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="next-btn date-range-btn"><img src="/img/next.png" alt=""></button>
+          </div>
+          <table class="schedual-table">
+            <ul class="table-head-values">
+              <li>Time</li>
+              <li>Monday</li>
+              <li>Tuesday</li>
+              <li>Wednesday</li>
+              <li>Thursday</li>
+              <li>Friday</li>
+              <li>Saturday</li>
+              <li>Sunday</li>
+            </ul>
+            <table id="gantt-chart">
+              <tbody>
+                <tr>
+                  <td class="time-td">
+                    <ul>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                      <li>12:00 AM</li>
+                    </ul>
+                  </td>
+                  <td class="schedual-values">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-red"><p>P</p></div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>$20</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="park-status park-green">
+                              <p>P</p>
+                              <span>Free<br /></span>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </table>
+        </div>
+
+       
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <p>© All rights reserved. ParkLive</p>
+    </div>
+  </body>
+</html>
