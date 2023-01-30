@@ -283,6 +283,10 @@ button.btn.text-white.rounded-pill.bg-green {
     .TotalHours p {
         margin-top: 10px !important; 
     }
+    .slotCar {
+        height: 50px !important; 
+        width: 50px !important; 
+    }
 }
 
 .owl-item {
