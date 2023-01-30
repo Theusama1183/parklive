@@ -38,7 +38,7 @@ a.nav-link {
     color: #fff;  
    }
 .btn{
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 .btnSignin:hover {
     background-color: #37bf36;
@@ -266,6 +266,10 @@ button.btn.text-white.rounded-pill.bg-green {
         border-radius: 10px;
         width: 100%;
     }
+    .nav-link:after {
+        content: url(../img/next-btn.png);
+        margin-top: 5px;
+    }
 }
 
 .owl-item {
@@ -293,6 +297,7 @@ button.btn.text-white.rounded-pill.bg-green {
 .section.text-center.text-white {
    background-image: url(../img/bg.png);
 }
+
 p.text_ks {
     font-size: 24px;
     font-weight: 700;
@@ -1059,4 +1064,408 @@ p.price-tag {
     border: 0;
     padding: 0;
     margin-top: 20px;
+}
+
+.modal {
+    background: #0000005e;
+    backdrop-filter: blur(20px) brightness(110%);
+}
+.modal-header,.modal-footer {
+    border: none;
+}
+  
+/* Hide all steps by default: */
+.tab {
+    display: none;
+  }
+  
+.form-group.form-check {
+    text-align: center;
+}
+#parking-steps  h3 {
+   font-size: 20px;
+   text-align: center;
+   margin-top: 30px;
+}
+
+#parking-steps h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#parking-steps .add-filter-button {
+    padding: 10px 30px !important;
+    margin: 5px;
+}
+.form-group.form-check {
+    display: flex;
+    justify-content: center;
+}
+
+.TotalHours p {
+    padding: 10px 20px !important;
+    background: #37BF36;
+    margin: 0 30px;
+    color: #fff;
+    border-radius: 30px;
+}
+.pick-time {
+    border: 0;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.form-group.form-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #EEEEEE;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.parking-slot-table-container {
+    border: 1px solid #EEEEEE;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.modal {
+    --bs-modal-width: 550px !important;
+}
+.slotCar {
+    background: url(../img/slot-car.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    height: 80px;
+    width: 108px;
+    background-position: center;
+}
+.slot-check{
+    display: none;
+}
+.slotCar {
+    color: transparent;
+}
+
+.slot-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.slot-check)+.btn:active{
+    background: #37BF36 !important;
+    border-color: #37BF36 !important;
+    color: #fff !important;
+}
+
+.slot-check + .btn:hover {
+    background: url(../img/slot-car.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    height: 80px;
+    width: 108px;
+    background-position: center;
+    color: transparent !important;
+    border-color: #37BF36 !important;
+}
+.slot-check:checked + .btn:hover {
+    background: url(../img/slot-car.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    height: 80px;
+    width: 108px;
+    background-position: center;
+    color: transparent !important;
+    color: #fff !important;
+    border-color: #37BF36 !important;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+.parking-process_btn {
+    font-size: 16px;
+    color: #fff;
+    background: #37BF36;
+    width: 310px;
+    height: 50px;
+    border-radius: 30px;
+    border: 0;
+    border-bottom: 1px solid #37BF36;
+    padding: 0;
+}
+.CancelBtn:hover{
+ background: transparent;
+ color: #000;
+}
+.CancelBtn:active{
+    background: transparent;
+    color: #000;
+   }
+   .modal .CancelBtn {
+    margin-top: 0;
+    margin-bottom: 20px;
+   }
+   .slot-content {
+    display:flex;
+    align-items: center;
+    align-content: center; 
+   }
+   .price-slot p {
+    margin: 0;
+    font-size: 16px;
+   }
+   .p-sign {
+    border-radius: 50%;
+    border: 2px solid;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+   }
+
+   .slotCar.btn {
+    padding: 15px 20px !important;
+}
+.slot-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paymentBtn {
+    height: 105px;
+    width: 105px;
+    border-radius: 15px;
+    outline: none;
+}
+.apple-payment {
+    background: #37BF36;
+    border-color: #37BF36;
+}
+.card-payment {
+    background: #222D2E;
+    border-color: #222D2E;
+    color: #fff;
+}
+.wallet-payment {
+    background: transparent;
+    border-color: #37BF36;
+    color: #37BF36;;
+}
+
+.parking-spot {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    width: 85%;
+    margin: auto;
+}
+.parking-spot h4 {
+    font-size: 20px;
+}
+
+.parking-spot p{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.tiket-details {
+    text-align: left !important;
+    width: 90%;
+    margin: auto;
+}
+.tiket-value {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.tiket-btn {
+    border: 0;
+    border-radius: 30px;
+    width: 105px;
+    height: 40px;
+}
+.tiket-btns {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.call-btn {
+    background: #37BF36;
+    color: #fff;
+}
+.direction-btn {
+    background: #222D2E;
+    color: #fff;
+}
+.direction-btn {
+    background: transparent;
+    border: 1px solid #37BF36;
+    color: #37BF36;
+}
+.extend-time {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    overflow: auto;
+    height: 282px;
+}
+.extend-time li {
+    padding: 15px;
+    border-top: 1px solid#eee;
+    border-bottom: 1px solid#eee;
+    color: #222D2E;
+}
+.nave-itema .nav-link a{
+    color: #222D2E !important;
+    font-size: 16px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: #37bf36 !important;
+}
+.nave-item .nav-link.active svg {
+    fill: #37bf36 !important;
+}
+
+li.nave-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nave-item:after {
+    content: url(../img/next-btn.png);
+    margin-right: 10px;
+}
+
+.parking-recipt-container img {
+    width: 170px;
+}
+.btn-view-detail {
+    background: #37BF36;
+    padding: 12px 25px;
+    border-radius: 50px;
+    color: #37BF36;
+    border: 1px solid #37BF36;
+    margin-top: 20px;
+}
+
+.parking-recipt-container{
+    padding: 15px;
+    border: 1px solid #37BF36;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.favorite-parking-spots{
+    border: 1px solid #37BF36;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+img.fav-list-image {
+    width: 100%;
+}
+.fav-btn {
+    background: none;
+    border: none;
+    
+}
+.fav-btn-container {
+    display: flex;
+    justify-content: end;
+}
+
+.paymentContainer .paymentBtn {
+    height: 255px !important;
+    width: 100% !important;
+    border-radius: 15px;
+    outline: none;
+}
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 120px;
+    height: 120px;
+}
+#profile-container:after {
+    content: url(../img/profile-upload.png);
+    position: absolute;
+    display: flex;
+    margin-top: -4%;
+    margin-left: 3%;
+}
+.profileContainer {
+    margin-top: 50px;
+}
+.profile_pic_name {
+    display: flex;
+    align-items: center;
+}
+.profile_pic_name h4 {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.account-header {
+    align-items: center;
+}
+.account-header-btn {
+    text-align: right;
+}
+.account-header-btn button {
+    background: #37BF36;
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px 30px;
+}
+.input-group-prepend {
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+}
+.input-group-text {
+    border: none !important;
+    background-color: transparent;
+    height: 50px;
+}
+.input-group-text {
+    color: #37BF36;
+}
+input#inlineFormInputGroup {
+    padding-left: 35px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: 10px;
 }

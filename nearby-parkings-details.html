@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/4ea6e3ab0b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
+    
     <title>ParkLive | Nearby Parkings Details</title>
 </head>
 <body>
@@ -83,7 +83,7 @@
         
         </div>
       </nav>
-        <div class="search-container">
+        <div class="container">
           <form action="" method="post">
             <div class="search-container">
               <button class="search-button" type="submit"><img src="img/search-btn.png" alt=""></button>
@@ -423,7 +423,7 @@
       </div>
     </div>
     <div class="btn-containerv text-center">
-      <button class="ScheduleParking">Schedule Parking </button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="ScheduleParking">Schedule Parking </button>
       <br>
       <button class="CancelBtn">Cancel</button>
     </div>
@@ -433,6 +433,287 @@
    <p>© All rights reserved. ParkLive</p>
   </div>
   </div>
+<div class="popup">
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="parking-steps">
+          <div class="tab">
+            <h2>Enter Details:</h2>
+            <h3>Choose Day</h3>
+            <div class="form-group form-check">
+              <div class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="Today">
+                <label class="add-filter-button btn btn-primary" for="Today">Today</label>
+              </div>
+              <div class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="Tomorrow">
+                <label class="add-filter-button btn btn-primary" for="Tomorrow">Tomorrow</label>
+              </div>
+              <div class="checkbox-btn">
+                <input type="checkbox" class="btn-check" id="Later">
+                <label class="add-filter-button btn btn-primary" for="Later">Later</label>
+              </div>
+           </div>
+           <h3>Choose Duration</h3>
+           <div class="form-group form-check border">
+              <div class="checkbox-btn">
+                <label for="Arrivalime">Arrival Time</label>
+                <input type="time" class="pick-time" id="Arrivalime" value="07:30">
+              </div>
+              <div class="TotalHours">
+                <p>2h</p>
+              </div>
+              <div class="checkbox-btn">
+                <label for="EndTime">Arrival Time</label>
+                <input type="time" class="pick-time" id="EndTime" value="09:30">
+              </div>
+            </div>
+            <h3>Pick Parking Slot</h3>
+            <div class="parking-slot-table-container">
+              <table class="parking-slot-table text-center" >
+                <thead>
+                  <tr>
+                    <th>C2</th>
+                    <th>C1</th>
+                    <th style="width: 2px;">Entry</th>
+                    <th>B2</th>
+                    <th>B1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checkbox-btn">
+                        <input type="checkbox" class="slot-check" id="slot1">
+                        <label class="slotCar btn btn-primary" for="slot1">
+                          <div class="slot-content">
+                            <span class="p-sign">P</span>
+                            <div class="price-slot">
+                              <p>$20</p>
+                              <p>B201</p>
+                            </div>
+                        </div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="checkbox-btn">
+                        <input type="checkbox" class="slot-check" id="slot2">
+                        <label class="slotCar btn btn-primary" for="slot2">
+                          <div class="slot-content">
+                              <span class="p-sign">P</span>
+                              <div class="price-slot">
+                                <p>$20</p>
+                                <p>B201</p>
+                              </div>
+                          </div>
+                        </label>
+                      </div>
+                    </td>
+                    <td style="border-left: 1px dashed #ddd; border-right: 1px dashed #ddd;">
+                    </td>
+                    <td>
+                      <div class="checkbox-btn">
+                        <input type="checkbox" class="slot-check" id="slot3">
+                        <label class="slotCar btn btn-primary" for="slot3">
+                          <div class="slot-content">
+                            <span class="p-sign">P</span>
+                            <div class="price-slot">
+                              <p>$20</p>
+                              <p>B201</p>
+                            </div>
+                        </div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="checkbox-btn">
+                        <input type="checkbox" class="slot-check" id="slot4">
+                        <label class="slotCar btn btn-primary" for="slot4">
+                          <div class="slot-content">
+                            <span class="p-sign">P</span>
+                            <div class="price-slot">
+                              <p>$20</p>
+                              <p>B201</p>
+                            </div>
+                        </div>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table> 
+            </div>
+          </div>
+          <div class="tab text-center">
+            <h2>Payment Details</h2>
+            <p>Review your payment details below<br>
+              and click continue to pay</p>
+           <div class="row">
+            <div class="col">
+             <button class="paymentBtn apple-payment">
+              <img src="img/apple.png" alt="">
+              <p>Apple Pay</p>
+             </button>
+            </div>
+            <div class="col">
+              <button class="paymentBtn card-payment">
+                <img src="img/apple.png" alt="">
+                <p>Credit/Debit
+                  Card</p>
+               </button>
+            </div>
+            <div class="col">
+              <button class="paymentBtn wallet-payment">
+                <img src="img/apple.png" alt="">
+                <p>Wallet Pay</p>
+               </button>
+            </div>
 
+            <div class="parking-spot">
+              <p>Designated Parking Spot</p>
+              <h4>B201</h4>
+            </div>
+            <div class="parking-spot">
+              <p>Day</p>
+              <h4>Monday, 23 Jan 2023</h4>
+            </div>
+            <div class="parking-spot">
+              <div class="form-group form-check">
+                <div class="checkbox-btn">
+                  <label for="Arrivalime">Arrival Time</label>
+                  <input type="time" class="pick-time" id="Arrivalime" value="07:30">
+                </div>
+                <div class="TotalHours">
+                  <p>2h</p>
+                </div>
+                <div class="checkbox-btn">
+                  <label for="EndTime">Arrival Time</label>
+                  <input type="time" class="pick-time" id="EndTime" value="09:30">
+                </div>
+              </div>
+            </div>
+            <div class="parking-spot border-0">
+              <p>Designated Parking Spot</p>
+              <h4>B201</h4>
+            </div>
+           </div>
+          </div>
+          <div class="tab text-center">
+            <h2>Parking Ticket</h2>
+            <img class="mt-3 mb-3" src="img/qr-code.png" alt="" width="150">
+            <div class="row tiket-details">
+              <div class="col">
+                <p class="mt-2 mb-0">Name</p>
+                <p class="tiket-value">John Doe</p>
+                <p class="mt-2 mb-0">Vehicle</p>
+                <p class="tiket-value">Baleno</p>
+                <p class="mt-2 mb-0">Parking Pass</p>
+                <p class="tiket-value">#32-56-76</p>
+                <p class="mt-2 mb-0">Day</p>
+                <p class="tiket-value">Mon, 23 Jan 2023</p>
+              </div>
+              <div class="col">
+                <p class="mt-2 mb-0">Mobile number</p>
+                <p class="tiket-value">+1 256 587 898</p>
+                <p class="mt-2 mb-0">Vehicle Number</p>
+                <p class="tiket-value">UP 78 CR1234</p>
+                <p class="mt-2 mb-0">Parking Slot</p>
+                <p class="tiket-value">B201</p>
+              </div>
+            </div>
+            <div class="row tiket-details">
+              <div class="col">
+                <p class="mt-2 mb-0">Arrival Time</p>
+                <p class="tiket-value">07:30 PM</p>
+              </div>
+              <div class="col">
+                <p class="mt-2 mb-0">End Time</p>
+                <p class="tiket-value">09:30 PM</p>
+              </div>
+            </div>
+            <div class="row tiket-details">
+              <div class="col">
+                <p class="mt-2 mb-0">Address</p>
+                <p class="tiket-value">Badger Ave Street</p>
+              </div>
+            </div>
+
+            <div class="row tiket-btns">
+              <div class="col"><button class="call-btn tiket-btn">Call Now</button></div>
+              <div class="col"><button class="direction-btn tiket-btn">Direction</button></div>
+              <div class="col"><button class="share-btn tiket-btn">Share</button></div>
+            </div>
+            
+          </div>
+          <div class="tab text-center">
+            <img src="img/ibtn.png" alt="">
+            <h2 class="mt-3 mb-2">Parking Notification</h2>
+            <h6>Parking Expiring Soon</h6>
+
+            <div class="parking-spot">
+              <p>Designated Parking Spot</p>
+              <h4>B201</h4>
+            </div>
+
+            <div class="parking-spot">
+              <p>Day</p>
+              <h4>Monday, 23 Jan 2023</h4>
+            </div>
+
+            <div class="parking-spot">
+              <div class="form-group form-check">
+                <div class="checkbox-btn">
+                  <label for="Arrivalime">Arrival Time</label>
+                  <input type="time" class="pick-time" id="Arrivalime" value="07:30">
+                </div>
+                <div class="TotalHours">
+                  <p>2h</p>
+                </div>
+                <div class="checkbox-btn">
+                  <label for="EndTime">Arrival Time</label>
+                  <input type="time" class="pick-time" id="EndTime" value="09:30">
+                </div>
+              </div>
+            </div>
+
+            <div class="parking-spot border-0">
+              <p>Address</p>
+              <h4>Badger Ave Street</h4>
+            </div>
+            
+          </div>
+          <div class="tab text-center">
+            <img src="img/park.png" alt="">
+            <h2 class="mt-3 mb-2">Extend Parking</h2>
+            <ul class="extend-time">
+              <li>01 hour</li>
+              <li>02 hours</li>
+              <li>03 hour</li>
+              <li>04 hour</li>
+              <li>05 hour</li>
+            </ul>
+          </div>
+          <div style="overflow:auto;">
+            <div class="text-center mt-3">
+              <button type="button" class="parking-process_btn" id="nextBtn" onclick="nextPrev(1)">Proceed</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <button type="button" class="CancelBtn" data-bs-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+</div>
+</div>
 </body>
 </html>
+
+<script src="/js/script.js"></script>
