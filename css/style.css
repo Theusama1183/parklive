@@ -262,6 +262,10 @@ button.btn.text-white.rounded-pill.bg-green {
         margin-right: auto;
         height: 100% !important;
     }
+    table {
+        border-radius: 10px;
+        width: 100%;
+    }
 }
 
 .owl-item {
