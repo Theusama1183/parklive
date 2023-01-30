@@ -277,6 +277,9 @@ button.btn.text-white.rounded-pill.bg-green {
         content: url(../img/next-btn.png);
         margin-top: 5px;
     }
+    .form-group.form-check {
+        display: block !important; 
+    }
     
 }
 
