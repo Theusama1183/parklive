@@ -247,6 +247,8 @@ button.btn.text-white.rounded-pill.bg-green {
     }
     .col-6,.col-8,.col-4{
         width: 100% !important;
+        margin-top: 10px;
+       
     }
     .nearby-parkings-container {
         position: relative !important;
@@ -270,6 +272,7 @@ button.btn.text-white.rounded-pill.bg-green {
         content: url(../img/next-btn.png);
         margin-top: 5px;
     }
+    
 }
 
 .owl-item {
