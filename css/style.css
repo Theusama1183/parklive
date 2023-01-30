@@ -245,6 +245,9 @@ button.btn.text-white.rounded-pill.bg-green {
     .row {
         display: block;
     }
+    .col-6,.col-8,.col-4{
+        width: 100% !important;
+    }
     .nearby-parkings-container {
         position: relative !important;
         background: rgb(255, 255, 255);
