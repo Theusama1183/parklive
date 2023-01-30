@@ -206,9 +206,7 @@ button.btn.text-white.rounded-pill.bg-green {
         width: 100%;
         margin: auto;
     }
-    .header-btn-container.flex {
-        display: none;
-    }
+
     button.bg-dark.py-3.px-5.rounded-pill.text-white.m-2 {
         margin-bottom: 50px !important;
         width: 96%  !important;
