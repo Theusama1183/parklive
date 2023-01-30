@@ -280,7 +280,9 @@ button.btn.text-white.rounded-pill.bg-green {
     .form-group.form-check {
         display: block !important; 
     }
-    
+    .TotalHours p {
+        margin-top: 10px !important; 
+    }
 }
 
 .owl-item {
