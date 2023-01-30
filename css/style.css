@@ -284,8 +284,8 @@ button.btn.text-white.rounded-pill.bg-green {
         margin-top: 10px !important; 
     }
     .slotCar {
-        height: 50px !important; 
-        width: 50px !important; 
+        height: 65px !important;
+        width: 65px !important;
     }
     .ScheduleParking {
         margin-top: 20px !important;
@@ -293,6 +293,9 @@ button.btn.text-white.rounded-pill.bg-green {
     #profile-container:after {
         margin-top: -16% !important;
         margin-left: 8% !important;
+    }
+    .slotCar.btn {
+        padding: 2px 2px !important;
     }
 }
 
@@ -1252,7 +1255,7 @@ p.price-tag {
    }
 
    .slotCar.btn {
-    padding: 15px 20px !important;
+    padding: 15px 20px;
 }
 .slot-content {
     display: flex;
