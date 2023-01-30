@@ -237,9 +237,9 @@ button.btn.text-white.rounded-pill.bg-green {
     .map-items-carosual .row {
         display: block !important;
     }
-    .map-items-carosual .owl-item {
+    /* .map-items-carosual .owl-item {
         width: 320px !important;
-    }
+    } */
     .row {
         display: block;
     }
