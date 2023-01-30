@@ -287,6 +287,13 @@ button.btn.text-white.rounded-pill.bg-green {
         height: 50px !important; 
         width: 50px !important; 
     }
+    .ScheduleParking {
+        margin-top: 20px !important;
+    }
+    #profile-container:after {
+        margin-top: -16% !important;
+        margin-left: 8% !important;
+    }
 }
 
 .owl-item {

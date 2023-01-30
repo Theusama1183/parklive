@@ -282,86 +282,88 @@
                       </ul>
                       
                 </div>
-                <div class="col-8">
-                    <div class="row account-header">
-                        <div class="col">
-                            <div class="profile_pic_name">
-                                <div class="profile-image-container">
-                                    <div id="profile-container">
-                                        <image id="profileImage" src="img/profile.png" />
+                <form action="" method="post">
+                    <div class="col-8">
+                        <div class="row account-header">
+                            <div class="col">
+                                <div class="profile_pic_name">
+                                    <div class="profile-image-container">
+                                        <div id="profile-container">
+                                            <image id="profileImage" src="img/profile.png" />
+                                        </div>
+                                         <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
                                     </div>
-                                     <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                    <h4>Jon Doe</h4>
                                 </div>
-                                <h4>Jon Doe</h4>
+                            </div>
+                            <div class="col account-header-btn">
+                                <button type="submit">Edit Profile</button>
                             </div>
                         </div>
-                        <div class="col account-header-btn">
-                            <button>Edit Profile</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="row profileContainer">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-row"> 
-                                              <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
-                                                </div>
-                                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email Address">
-                                              </div>
-                                            
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
-                                                </div>
-                                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Address">
-                                              </div>
-                                            
-                                        </div>
-                                        <div class="form-row">
-                                             <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></div>
-                                                </div>
-                                                <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-row">
-                                              <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
-                                                </div>
-                                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone Number">
-                                              </div>
-                                        </div>
-                                        <div class="form-row">
-                                              <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-solid fa-car"></i></div>
-                                                </div>
-                                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Car Number">
-                                              </div> 
-                                        </div>
-                                        <div class="form-row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row profileContainer">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-row"> 
+                                                  <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email Address">
+                                                  </div>
+                                                
+                                            </div>
+                                            <div class="form-row">
                                                 <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                  <div class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></div>
-                                                </div>
-                                                <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Repeat password">
-                                              </div>
-                                            
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Address">
+                                                  </div>
+                                                
+                                            </div>
+                                            <div class="form-row">
+                                                 <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></div>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-row">
+                                                  <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone Number">
+                                                  </div>
+                                            </div>
+                                            <div class="form-row">
+                                                  <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-solid fa-car"></i></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Car Number">
+                                                  </div> 
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                      <div class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></div>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Repeat password">
+                                                  </div>
+                                                
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
